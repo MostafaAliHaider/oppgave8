@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "oppgave8"
+    "name": "My Sanity Project"
   },
   "api": {
-    "projectId": "92s29sou",
+    "projectId": "37vvltpe",
     "dataset": "production"
   },
   "plugins": [
