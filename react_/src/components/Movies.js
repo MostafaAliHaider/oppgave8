@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { getMovies } from "../lib/services/movie"
 
-const Movies = () => {
+const Movies = ({data, setData}) => {
 
     const [content, setContent] = useState ([])
 
