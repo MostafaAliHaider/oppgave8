@@ -1,19 +1,41 @@
 
 import { useState } from 'react';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+//Components
+import Actors from './components/Actors';
 import Movies from './components/Movies';
+import Actor from './components/Actor';
+import Movie from './components/Movie';
+import Navigation from './components/Navigation';
+
 
 function App() {
 
-  const [data, setData ] = useState ('')
-  
+  const [data, setData] = useState('')
+  const [actor, setActor] = useState('')
+
   return (
     <div >
-     <Movies />
-     <Hei/>
-    
+
+      <Navigation />
+      <Routes >
+
+        <Route index element={<Movies data={data} setData={setData} />} />
+
+        <Route path="actors">
+          <Route index element={<Actors actor={actor} setActor={setActor} />} />
+          <Route path=":name" element={<Actor actor={actor} />} />
+        </Route>
+        <Route path="movies">
+          <Route index element={<Movies data={data} setData={setData} />} />
+          <Route path=":name" element={<Movie data={data} />} />
+        </Route>
+
+      </Routes>
     </div>
   );
 }
+
 
 export default App;

@@ -16,5 +16,35 @@ export default {
             to: {type: 'actor'},
 
         },
+        {
+            type: 'reference',
+            name: 'actor2',
+            title: 'title',
+            to: {type: 'actor'},
+        },
+        {
+            type:'text',
+            name:'tekst',
+            title: 'Description',
+            description: 'Movie description'
+        },
+        {
+            type:'image',
+            name:'poster',
+            title:'Movie poster',
+        },
+        {
+            type: 'slug',
+            name: 'slug2',
+            title: 'name',
+            options: {
+                source: 'title',
+                maxLength: 200,
+                slugify: input => input
+                                        .toLowerCase()
+                                        .replace(/\s+/g, '-')
+                                        .slice(0, 200)
+            }
+        }
     ],
 }

@@ -10,6 +10,24 @@ export default {
             description: 'Actor`s name',
         },
         {
+            type:'text',
+            name:'actorTekst',
+            title: 'Description',
+            description: 'Get to know the Actor'
+        },
+        {
+            type:'image',
+            name:'poster',
+            title: 'Actor poster',
+        },
+        {
+            type: 'reference',
+            name: 'movie',
+            title: 'title',
+            to: {type: 'movie'},
+
+        },
+        {
             type: 'slug',
             name: 'name',
             title: 'name',
