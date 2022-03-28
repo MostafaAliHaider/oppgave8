@@ -13,20 +13,27 @@ export default {
             type:'text',
             name:'actorTekst',
             title: 'Description',
-            description: 'Get to know the Actor'
+            description: 'Get to know the Actor',
         },
         {
             type:'image',
             name:'poster',
             title: 'Actor poster',
         },
-        {
+         {
             type: 'reference',
             name: 'movie',
-            title: 'title',
+            title: 'movie',
             to: {type: 'movie'},
 
         },
+       /*  {
+            type: 'reference',
+            name: 'movie2',
+            title: 'movie',
+            to: {type: 'movie'},
+
+        },  */
         {
             type: 'slug',
             name: 'name',

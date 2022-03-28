@@ -16,8 +16,7 @@ actor,
 "slug": name.current,
 actorTekst,
 "poster": poster{asset->{url}},
-
-
+"movie": movie->slug2.current,
 
 `
 
